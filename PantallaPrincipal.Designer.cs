@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vERPROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +64,7 @@
             this.vERPROVEEDORESToolStripMenuItem.Name = "vERPROVEEDORESToolStripMenuItem";
             this.vERPROVEEDORESToolStripMenuItem.Size = new System.Drawing.Size(222, 22);
             this.vERPROVEEDORESToolStripMenuItem.Text = "VER PROVEEDORES";
+            this.vERPROVEEDORESToolStripMenuItem.Click += new System.EventHandler(this.vERPROVEEDORESToolStripMenuItem_Click);
             // 
             // cARGARPROVEEDORESToolStripMenuItem
             // 
@@ -78,9 +80,11 @@
             this.BackgroundImage = global::PryCarrenoIE.Properties.Resources.PROSEGUR1;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PantallaPrincipal";
             this.Text = "PantallaPrincipal";
+            this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
