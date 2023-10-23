@@ -25,7 +25,7 @@ namespace PryCarrenoIE
         private void btnVolver_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            CargarProveedores VarVolver = new CargarProveedores();
+            PantallaPrincipal VarVolver = new PantallaPrincipal();
             VarVolver.Show();
         }
 

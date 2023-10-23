@@ -19,9 +19,9 @@ namespace PryCarrenoIE
 
         private void cARGARPROVEEDORESToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //PantallaPrincipal VarPasar = new CargarProveedores();
-            //VarPasar.Show();
+            this.Hide();
+            CargarProveedores VarPasar = new CargarProveedores();
+            VarPasar.Show();
         }
         public partial class PantallaCarga : Form
         {
