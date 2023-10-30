@@ -36,14 +36,17 @@
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblLiquidador = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtEntidad = new System.Windows.Forms.TextBox();
+            this.txtApertura = new System.Windows.Forms.TextBox();
+            this.txtExp = new System.Windows.Forms.TextBox();
+            this.txtJuzg = new System.Windows.Forms.TextBox();
+            this.txtDirección = new System.Windows.Forms.TextBox();
+            this.txtLiquidador = new System.Windows.Forms.TextBox();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtJurisdicción = new System.Windows.Forms.TextBox();
+            this.BtnModificar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNúmero
@@ -61,7 +64,7 @@
             // 
             this.lblEntidad.BackColor = System.Drawing.Color.Transparent;
             this.lblEntidad.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntidad.Location = new System.Drawing.Point(61, 171);
+            this.lblEntidad.Location = new System.Drawing.Point(61, 160);
             this.lblEntidad.Name = "lblEntidad";
             this.lblEntidad.Size = new System.Drawing.Size(125, 27);
             this.lblEntidad.TabIndex = 1;
@@ -72,18 +75,19 @@
             // 
             this.lblJuzg.BackColor = System.Drawing.Color.Transparent;
             this.lblJuzg.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJuzg.Location = new System.Drawing.Point(61, 306);
+            this.lblJuzg.Location = new System.Drawing.Point(61, 259);
             this.lblJuzg.Name = "lblJuzg";
-            this.lblJuzg.Size = new System.Drawing.Size(177, 28);
+            this.lblJuzg.Size = new System.Drawing.Size(129, 28);
             this.lblJuzg.TabIndex = 2;
-            this.lblJuzg.Text = "JUZG. JURISD\t";
+            this.lblJuzg.Text = "JUZGADO\t";
             this.lblJuzg.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblJuzg.Click += new System.EventHandler(this.lblJuzg_Click);
             // 
             // lblExpte
             // 
             this.lblExpte.BackColor = System.Drawing.Color.Transparent;
             this.lblExpte.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpte.Location = new System.Drawing.Point(61, 263);
+            this.lblExpte.Location = new System.Drawing.Point(63, 227);
             this.lblExpte.Name = "lblExpte";
             this.lblExpte.Size = new System.Drawing.Size(125, 29);
             this.lblExpte.TabIndex = 3;
@@ -94,7 +98,7 @@
             // 
             this.lblApertura.BackColor = System.Drawing.Color.Transparent;
             this.lblApertura.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApertura.Location = new System.Drawing.Point(61, 217);
+            this.lblApertura.Location = new System.Drawing.Point(61, 193);
             this.lblApertura.Name = "lblApertura";
             this.lblApertura.Size = new System.Drawing.Size(147, 28);
             this.lblApertura.TabIndex = 4;
@@ -105,7 +109,7 @@
             // 
             this.lblDireccion.BackColor = System.Drawing.Color.Transparent;
             this.lblDireccion.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(61, 348);
+            this.lblDireccion.Location = new System.Drawing.Point(60, 329);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(147, 29);
             this.lblDireccion.TabIndex = 5;
@@ -116,7 +120,7 @@
             // 
             this.lblLiquidador.BackColor = System.Drawing.Color.Transparent;
             this.lblLiquidador.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiquidador.Location = new System.Drawing.Point(61, 390);
+            this.lblLiquidador.Location = new System.Drawing.Point(58, 366);
             this.lblLiquidador.Name = "lblLiquidador";
             this.lblLiquidador.Size = new System.Drawing.Size(352, 30);
             this.lblLiquidador.TabIndex = 6;
@@ -126,58 +130,58 @@
             // txtNum
             // 
             this.txtNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNum.Location = new System.Drawing.Point(430, 135);
+            this.txtNum.Location = new System.Drawing.Point(423, 141);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(334, 20);
             this.txtNum.TabIndex = 7;
             // 
-            // textBox1
+            // txtEntidad
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(430, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 20);
-            this.textBox1.TabIndex = 8;
+            this.txtEntidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEntidad.Location = new System.Drawing.Point(423, 167);
+            this.txtEntidad.Name = "txtEntidad";
+            this.txtEntidad.Size = new System.Drawing.Size(334, 20);
+            this.txtEntidad.TabIndex = 8;
             // 
-            // textBox2
+            // txtApertura
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(430, 225);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtApertura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApertura.Location = new System.Drawing.Point(423, 201);
+            this.txtApertura.Name = "txtApertura";
+            this.txtApertura.Size = new System.Drawing.Size(334, 20);
+            this.txtApertura.TabIndex = 9;
             // 
-            // textBox3
+            // txtExp
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(430, 272);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(334, 20);
-            this.textBox3.TabIndex = 10;
+            this.txtExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtExp.Location = new System.Drawing.Point(423, 236);
+            this.txtExp.Name = "txtExp";
+            this.txtExp.Size = new System.Drawing.Size(334, 20);
+            this.txtExp.TabIndex = 10;
             // 
-            // textBox4
+            // txtJuzg
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(430, 314);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(334, 20);
-            this.textBox4.TabIndex = 11;
+            this.txtJuzg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJuzg.Location = new System.Drawing.Point(423, 267);
+            this.txtJuzg.Name = "txtJuzg";
+            this.txtJuzg.Size = new System.Drawing.Size(334, 20);
+            this.txtJuzg.TabIndex = 11;
             // 
-            // textBox5
+            // txtDirección
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(430, 357);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(334, 20);
-            this.textBox5.TabIndex = 12;
+            this.txtDirección.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDirección.Location = new System.Drawing.Point(423, 335);
+            this.txtDirección.Name = "txtDirección";
+            this.txtDirección.Size = new System.Drawing.Size(334, 20);
+            this.txtDirección.TabIndex = 12;
             // 
-            // textBox6
+            // txtLiquidador
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(430, 400);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(334, 20);
-            this.textBox6.TabIndex = 13;
+            this.txtLiquidador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLiquidador.Location = new System.Drawing.Point(424, 369);
+            this.txtLiquidador.Name = "txtLiquidador";
+            this.txtLiquidador.Size = new System.Drawing.Size(334, 20);
+            this.txtLiquidador.TabIndex = 13;
             // 
             // btnCargar
             // 
@@ -202,20 +206,52 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click_1);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(58, 294);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 28);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "JURISDICCIÓN";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // txtJurisdicción
+            // 
+            this.txtJurisdicción.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtJurisdicción.Location = new System.Drawing.Point(423, 302);
+            this.txtJurisdicción.Name = "txtJurisdicción";
+            this.txtJurisdicción.Size = new System.Drawing.Size(334, 20);
+            this.txtJurisdicción.TabIndex = 17;
+            // 
+            // BtnModificar
+            // 
+            this.BtnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificar.Location = new System.Drawing.Point(599, 426);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(84, 23);
+            this.BtnModificar.TabIndex = 18;
+            this.BtnModificar.Text = "MODIFICAR";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            // 
             // CargarProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryCarrenoIE.Properties.Resources.PROSEGUR__1_;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.BtnModificar);
+            this.Controls.Add(this.txtJurisdicción);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCargar);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLiquidador);
+            this.Controls.Add(this.txtDirección);
+            this.Controls.Add(this.txtJuzg);
+            this.Controls.Add(this.txtExp);
+            this.Controls.Add(this.txtApertura);
+            this.Controls.Add(this.txtEntidad);
             this.Controls.Add(this.txtNum);
             this.Controls.Add(this.lblLiquidador);
             this.Controls.Add(this.lblDireccion);
@@ -226,6 +262,7 @@
             this.Controls.Add(this.lblNúmero);
             this.Name = "CargarProveedores";
             this.Text = "Cargar Proveedores";
+            this.Load += new System.EventHandler(this.CargarProveedores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,14 +277,17 @@
         private System.Windows.Forms.Label lblApertura;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblLiquidador;
-        private System.Windows.Forms.TextBox txtNum;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnVolver;
+        public System.Windows.Forms.TextBox txtNum;
+        public System.Windows.Forms.TextBox txtEntidad;
+        public System.Windows.Forms.TextBox txtApertura;
+        public System.Windows.Forms.TextBox txtExp;
+        public System.Windows.Forms.TextBox txtJuzg;
+        public System.Windows.Forms.TextBox txtDirección;
+        public System.Windows.Forms.TextBox txtLiquidador;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox txtJurisdicción;
+        protected System.Windows.Forms.Button BtnModificar;
     }
 }

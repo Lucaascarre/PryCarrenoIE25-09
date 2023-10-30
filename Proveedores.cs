@@ -161,7 +161,7 @@ namespace PryCarrenoIE
         public void ingresarNodoTreeView()
         {
             TreeNode Nodoraiz;
-            DirectoryInfo info = new DirectoryInfo(@"../../Resources");
+            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Proveedores");
             if (info.Exists)
             {
                 Nodoraiz = new TreeNode(info.Name);
@@ -226,7 +226,7 @@ namespace PryCarrenoIE
         {
             string i = listView1.SelectedItems[0].Text.ToString();
             string rutaArchivoParcial = Path.Combine(ruta, i);
-            string rutaArchivoFinal = Path.Combine(@"../../Resources", rutaArchivoParcial);
+            string rutaArchivoFinal = Path.Combine(@"../../Resources/Proveedores/", rutaArchivoParcial);
 
             GrlProveedores frmdatosgrilla = new GrlProveedores();
 
@@ -247,9 +247,15 @@ namespace PryCarrenoIE
             frmdatosgrilla.Show();
             this.Hide();
         }
-        
 
-           
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
     }
 }

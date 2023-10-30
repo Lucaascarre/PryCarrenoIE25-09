@@ -30,24 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaCarga));
-            this.timerCarga = new System.Windows.Forms.Timer(this.components);
-            this.barraProgreso = new System.Windows.Forms.ProgressBar();
             this.Porcentaje = new System.Windows.Forms.Label();
             this.lblCargando = new System.Windows.Forms.Label();
+            this.barraProgreso = new System.Windows.Forms.ProgressBar();
+            this.timerCarga = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
-            // 
-            // timerCarga
-            // 
-            this.timerCarga.Enabled = true;
-            // 
-            // barraProgreso
-            // 
-            this.barraProgreso.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.barraProgreso.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.barraProgreso.Location = new System.Drawing.Point(297, 400);
-            this.barraProgreso.Name = "barraProgreso";
-            this.barraProgreso.Size = new System.Drawing.Size(230, 23);
-            this.barraProgreso.TabIndex = 0;
             // 
             // Porcentaje
             // 
@@ -63,11 +50,26 @@
             this.lblCargando.AutoSize = true;
             this.lblCargando.BackColor = System.Drawing.Color.Transparent;
             this.lblCargando.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargando.Location = new System.Drawing.Point(370, 439);
+            this.lblCargando.Location = new System.Drawing.Point(348, 421);
             this.lblCargando.Name = "lblCargando";
             this.lblCargando.Size = new System.Drawing.Size(88, 13);
             this.lblCargando.TabIndex = 2;
             this.lblCargando.Text = "CARGANDO...";
+            // 
+            // barraProgreso
+            // 
+            this.barraProgreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.barraProgreso.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.barraProgreso.Location = new System.Drawing.Point(257, 395);
+            this.barraProgreso.Maximum = 101;
+            this.barraProgreso.Name = "barraProgreso";
+            this.barraProgreso.Size = new System.Drawing.Size(249, 23);
+            this.barraProgreso.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.barraProgreso.TabIndex = 3;
+            // 
+            // timerCarga
+            // 
+            this.timerCarga.Enabled = true;
             // 
             // PantallaCarga
             // 
@@ -75,23 +77,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryCarrenoIE.Properties.Resources.Diseño_sin_título1;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.barraProgreso);
             this.Controls.Add(this.lblCargando);
             this.Controls.Add(this.Porcentaje);
-            this.Controls.Add(this.barraProgreso);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PantallaCarga";
             this.Text = "PantallaCarga";
-            this.Load += new System.EventHandler(this.PantallaCarga_Load);
+            this.Load += new System.EventHandler(this.PantallaCarga_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        public System.Windows.Forms.Timer timerCarga;
         private System.Windows.Forms.Label Porcentaje;
         private System.Windows.Forms.Label lblCargando;
-        public System.Windows.Forms.ProgressBar barraProgreso;
+        private System.Windows.Forms.ProgressBar barraProgreso;
+        private System.Windows.Forms.Timer timerCarga;
     }
 }

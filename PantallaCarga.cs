@@ -27,12 +27,12 @@ namespace PryCarrenoIE
         private void timerCarga_Tick(object sender, EventArgs e)
         {
             if (barraProgreso.Value < 100)
-    {
+            {
                 barraProgreso.Value += 1;
-            Porcentaje.Text = barraProgreso.Value.ToString() + "%";
+                Porcentaje.Text = barraProgreso.Value.ToString() + "%";
 
             }
-            
+
             if (barraProgreso.Value == barraProgreso.Maximum)
 
             {
@@ -41,9 +41,17 @@ namespace PryCarrenoIE
                 PantallaPrincipal frminicioprincipal = new PantallaPrincipal();
                 frminicioprincipal.Show();
             }
+            
+
 
 
 
         }
+
+        private void PantallaCarga_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

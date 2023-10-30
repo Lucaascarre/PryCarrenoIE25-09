@@ -33,5 +33,15 @@ namespace PryCarrenoIE
         {
 
         }
+
+        private void lblJuzg_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CargarProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

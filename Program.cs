@@ -16,7 +16,7 @@ namespace PryCarrenoIE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaCarga());
+            Application.Run(new Proveedores());
         }
     }
 }

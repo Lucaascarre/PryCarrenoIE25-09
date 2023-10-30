@@ -64,6 +64,12 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="InicioSesión.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InicioSesión.Designer.cs">
+      <DependentUpon>InicioSesión.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaCarga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     <Compile Include="Proveedores.Designer.cs">
       <DependentUpon>Proveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registrar Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registrar Usuario.Designer.cs">
+      <DependentUpon>Registrar Usuario.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CargarProveedores.resx">
       <DependentUpon>CargarProveedores.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioSesión.resx">
+      <DependentUpon>InicioSesión.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaCarga.resx">
       <DependentUpon>PantallaCarga.cs</DependentUpon>
@@ -111,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="Proveedores.resx">
       <DependentUpon>Proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar Usuario.resx">
+      <DependentUpon>Registrar Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -143,5 +161,6 @@
   <ItemGroup>
     <None Include="Resources\Diseño sin título.gif" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
