@@ -50,7 +50,7 @@
             this.lblCargando.AutoSize = true;
             this.lblCargando.BackColor = System.Drawing.Color.Transparent;
             this.lblCargando.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargando.Location = new System.Drawing.Point(348, 421);
+            this.lblCargando.Location = new System.Drawing.Point(359, 421);
             this.lblCargando.Name = "lblCargando";
             this.lblCargando.Size = new System.Drawing.Size(88, 13);
             this.lblCargando.TabIndex = 2;
@@ -60,7 +60,7 @@
             // 
             this.barraProgreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.barraProgreso.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.barraProgreso.Location = new System.Drawing.Point(257, 395);
+            this.barraProgreso.Location = new System.Drawing.Point(272, 395);
             this.barraProgreso.Maximum = 101;
             this.barraProgreso.Name = "barraProgreso";
             this.barraProgreso.Size = new System.Drawing.Size(249, 23);

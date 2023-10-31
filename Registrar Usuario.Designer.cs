@@ -46,7 +46,7 @@
             // 
             // txtUsuarioRegistrar
             // 
-            this.txtUsuarioRegistrar.Location = new System.Drawing.Point(262, 155);
+            this.txtUsuarioRegistrar.Location = new System.Drawing.Point(262, 156);
             this.txtUsuarioRegistrar.Name = "txtUsuarioRegistrar";
             this.txtUsuarioRegistrar.Size = new System.Drawing.Size(229, 20);
             this.txtUsuarioRegistrar.TabIndex = 1;
