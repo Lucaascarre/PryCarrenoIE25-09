@@ -48,5 +48,40 @@ namespace PryCarrenoIE
             Proveedores VarAtrás = new Proveedores();
             VarAtrás.Show();    
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            
+            
+                // Obtén la fila seleccionada en el DataGridView
+                DataGridViewRow filaSeleccionada = dataGridView1.CurrentRow;
+
+                if (filaSeleccionada != null)
+                {
+                    // Crea una instancia del formulario de modificación
+                    CargarProveedores frmModificacion = new CargarProveedores();
+
+                    // Pasa los datos de la fila seleccionada al formulario de modificación
+                    frmModificacion.txtNum.Text = filaSeleccionada.Cells[0].Value.ToString();
+                    frmModificacion.txtEntidad.Text = filaSeleccionada.Cells[1].Value.ToString();
+                    frmModificacion.txtApertura.Text = filaSeleccionada.Cells[2].Value.ToString();
+                    frmModificacion.txtExp.Text = filaSeleccionada.Cells[3].Value.ToString();
+                    frmModificacion.txtJuzg.Text = filaSeleccionada.Cells[4].Value.ToString();
+                    frmModificacion.txtJurisdicción.Text = filaSeleccionada.Cells[5].Value.ToString();
+                    frmModificacion.txtDirección.Text = filaSeleccionada.Cells[6].Value.ToString();
+                    frmModificacion.txtLiquidador.Text = filaSeleccionada.Cells[7].Value.ToString();
+
+
+                // Agrega más líneas según las columnas que tengas en tu DataGridView
+
+                // Muestra el formulario de modificación
+                frmModificacion.Show();
+
+                    // Oculta el formulario actual si es necesario
+                    this.Hide();
+                
+                }
+
+        }
     }
 }

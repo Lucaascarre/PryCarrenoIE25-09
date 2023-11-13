@@ -234,6 +234,7 @@
             this.BtnModificar.TabIndex = 18;
             this.BtnModificar.Text = "MODIFICAR";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // CargarProveedores
             // 

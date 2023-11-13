@@ -53,6 +53,12 @@
       <DependentUpon>CargarProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="clsUsuario.cs" />
+    <Compile Include="ElClub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElClub.Designer.cs">
+      <DependentUpon>ElClub.cs</DependentUpon>
+    </Compile>
     <Compile Include="GrlProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="CargarProveedores.resx">
       <DependentUpon>CargarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElClub.resx">
+      <DependentUpon>ElClub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GrlProveedores.resx">
       <DependentUpon>GrlProveedores.cs</DependentUpon>
