@@ -13,18 +13,30 @@ namespace PryCarrenoIE
 {
     public partial class Inicio : Form
     {
+
+       clsElClub objBaseDatos;
+        
         public Inicio()
+
+
+
         {
             InitializeComponent();
         }
 
         private void Inicio_Load(object sender, EventArgs e)
         {
-
+            objBaseDatos = new clsElClub();
+            objBaseDatos.ConectarBD();
+            lblEstadoConexion.Text = objBaseDatos.EstadoConexion;
+            lblEstadoConexion.BackColor = Color.Green;
+            objBaseDatos.TraerDatos(GrlMostrarDatos);
         }
-  
-    
-        
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            objBaseDatos.BuscarPorCodigo(int.Parse(txtId.Text));
+        }
     }
 
         //private void button1_Click(object sender, EventArgs e)

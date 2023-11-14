@@ -49,6 +49,14 @@ namespace PryCarrenoIE
             Proveedores frmProveedores = new Proveedores();
             frmProveedores.Show();
         }
+
+        private void eLCLUBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Inicio pasar = new Inicio();
+            pasar.Show();
+        }
+         }
     }
-    }
+    
 

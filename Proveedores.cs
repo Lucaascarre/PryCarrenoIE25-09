@@ -226,7 +226,7 @@ namespace PryCarrenoIE
         {
             string i = listView1.SelectedItems[0].Text.ToString();
             string rutaArchivoParcial = Path.Combine(ruta, i);
-            string rutaArchivoFinal = Path.Combine(@"../../Resources/Proveedores/", rutaArchivoParcial);
+            string rutaArchivoFinal = Path.Combine(@"../../Resources/Proveedores", rutaArchivoParcial);
 
             GrlProveedores frmdatosgrilla = new GrlProveedores();
 

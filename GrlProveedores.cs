@@ -51,36 +51,61 @@ namespace PryCarrenoIE
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            
-            
-                // Obtén la fila seleccionada en el DataGridView
-                DataGridViewRow filaSeleccionada = dataGridView1.CurrentRow;
-
-                if (filaSeleccionada != null)
-                {
-                    // Crea una instancia del formulario de modificación
-                    CargarProveedores frmModificacion = new CargarProveedores();
-
-                    // Pasa los datos de la fila seleccionada al formulario de modificación
-                    frmModificacion.txtNum.Text = filaSeleccionada.Cells[0].Value.ToString();
-                    frmModificacion.txtEntidad.Text = filaSeleccionada.Cells[1].Value.ToString();
-                    frmModificacion.txtApertura.Text = filaSeleccionada.Cells[2].Value.ToString();
-                    frmModificacion.txtExp.Text = filaSeleccionada.Cells[3].Value.ToString();
-                    frmModificacion.txtJuzg.Text = filaSeleccionada.Cells[4].Value.ToString();
-                    frmModificacion.txtJurisdicción.Text = filaSeleccionada.Cells[5].Value.ToString();
-                    frmModificacion.txtDirección.Text = filaSeleccionada.Cells[6].Value.ToString();
-                    frmModificacion.txtLiquidador.Text = filaSeleccionada.Cells[7].Value.ToString();
 
 
-                // Agrega más líneas según las columnas que tengas en tu DataGridView
+            //// Obtén la fila seleccionada en el DataGridView
+            //DataGridViewRow filaSeleccionada = dataGridView1.CurrentRow;
 
-                // Muestra el formulario de modificación
-                frmModificacion.Show();
+            //if (filaSeleccionada != null)
+            //{
+            //    // Crea una instancia del formulario de modificación
+            //    CargarProveedores frmModificacion = new CargarProveedores();
 
-                    // Oculta el formulario actual si es necesario
-                    this.Hide();
-                
-                }
+            //    // Pasa los datos de la fila seleccionada al formulario de modificación
+            //    frmModificacion.txtNum.Text = filaSeleccionada.Cells[0].Value.ToString();
+            //    frmModificacion.txtEntidad.Text = filaSeleccionada.Cells[1].Value.ToString();
+            //    frmModificacion.txtApertura.Text = filaSeleccionada.Cells[2].Value.ToString();
+            //    frmModificacion.txtExp.Text = filaSeleccionada.Cells[3].Value.ToString();
+            //    frmModificacion.txtJuzg.Text = filaSeleccionada.Cells[4].Value.ToString();
+            //    frmModificacion.txtJurisdicción.Text = filaSeleccionada.Cells[5].Value.ToString();
+            //    frmModificacion.txtDirección.Text = filaSeleccionada.Cells[6].Value.ToString();
+            //    frmModificacion.txtLiquidador.Text = filaSeleccionada.Cells[7].Value.ToString();
+
+
+            //// Agrega más líneas según las columnas que tengas en tu DataGridView
+
+            //// Muestra el formulario de modificación
+            //frmModificacion.Show();
+
+            //    // Oculta el formulario actual si es necesario
+            //    this.Hide();
+
+            //}
+            //En la variable n guardo el indice de la fila seleccionada en la grilla
+            int n = dataGridView1.CurrentCell.RowIndex;
+            DataGridViewRow filaSeleccionada = dataGridView1.Rows[n];  // Cambio aquí
+
+            CargarProveedores modificar = new CargarProveedores();
+
+            // El ReadOnly solo deja ver el contenido del txt, no deja que se modifique
+            modificar.txtNum.ReadOnly = true;
+
+            // Cargo todos los txt del formulario ABM para que solo modifique lo que quiera, sin tener que cargar todo de nuevo
+            modificar.txtNum.Text = filaSeleccionada.Cells[0].Value.ToString();
+            modificar.txtEntidad.Text = filaSeleccionada.Cells[1].Value.ToString();
+            modificar.txtApertura.Text = filaSeleccionada.Cells[2].Value.ToString();
+            modificar.txtExp.Text = filaSeleccionada.Cells[3].Value.ToString();
+            modificar.txtJuzg.Text = filaSeleccionada.Cells[4].Value.ToString();
+            modificar.txtJurisdicción.Text = filaSeleccionada.Cells[5].Value.ToString();
+            modificar.txtDirección.Text = filaSeleccionada.Cells[6].Value.ToString();
+            modificar.txtLiquidador.Text = filaSeleccionada.Cells[7].Value.ToString();
+
+            string ID = Convert.ToString(filaSeleccionada.Cells[0].Value);
+
+            //modificar.btnModificar.Enabled = true;
+            modificar.Show();
+            this.Hide();
+
 
         }
     }

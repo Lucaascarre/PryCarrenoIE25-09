@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,26 @@ namespace PryCarrenoIE
         {
             InitializeComponent();
         }
-        private int valorDelIdDelRegistro;
+        GabarDatos grabarDatos = new GabarDatos();
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            grabarDatos.Grabar(txtNum.Text, txtEntidad.Text, txtApertura.Text, txtExp.Text, txtJuzg.Text, txtJurisdicción.Text, txtDirección.Text, txtLiquidador.Text);
+            MessageBox.Show("Datos guardados");
+            txtNum.Text = "";
+            txtEntidad.Text = "";
+            txtApertura.Text = "";
+            txtExp.Text = "";
+            txtJuzg.Text = "";
+            txtJurisdicción.Text = "";
+            txtDirección.Text = "";
+            txtLiquidador.Text = "";
+
+        }
+        //private int valorDelIdDelRegistro;
         private void btnVolver_Click(object sender, EventArgs e)
         {
-                       
+
         }
 
         private void btnVolver_Click_1(object sender, EventArgs e)
@@ -30,64 +47,100 @@ namespace PryCarrenoIE
             VarVolver.Show();
         }
 
-        private void btnCargar_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void lblJuzg_Click(object sender, EventArgs e)
         {
 
         }
-        private void ActualizarBaseDeDatos(string nuevoValor)
+
+
+
+        private void CargarProveedores_Load(object sender, EventArgs e)
         {
-            // Conectar a la base de datos
-            string cadenaConexion = 
 
-            using (OleDbConnection conexion = new OleDbConnection(cadenaConexion))
+        }
+        public static string RutaFull;
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            string ID = txtNum.Text;
+            List<string> LineaArchivo = new List<string>();
+
+            using (StreamReader leer = new StreamReader(RutaFull))
             {
-                // Construir la consulta SQL para la actualización
-                string consultaSQL = "UPDATE Proveedores SET TuCampo = @NuevoValor WHERE Id = @Id";
-
-                // Crear el comando con los parámetros
-                using (OleDbCommand comando = new OleDbCommand(consultaSQL, conexion))
+                string line;
+                while ((line = leer.ReadLine()) != null)
                 {
-                    comando.Parameters.AddWithValue("@NuevoValor", nuevoValor);
-                    comando.Parameters.AddWithValue("@Id", valorDelIdDelRegistro);  // Ajusta según tu caso
-
-                    try
+                    string[] parametros = line.Split(';');
+                    if (parametros[0] != ID)
                     {
-                        // Abrir la conexión y ejecutar la consulta
-                        conexion.Open();
-                        comando.ExecuteNonQuery();
+                        LineaArchivo.Add(line);
 
-                        // Puedes agregar más lógica aquí después de la actualización si es necesario
                     }
-                    catch (Exception ex)
+                    else
                     {
-                        // Manejar cualquier excepción que pueda ocurrir durante la actualización
-                        MessageBox.Show("Error al actualizar la base de datos: " + ex.Message);
+                        string nuevaLinea = txtNum.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtExp.Text + ";" + txtJuzg.Text + ";" + txtJurisdicción.Text + ";" + txtDirección.Text + ";" + txtLiquidador.Text;
+                        LineaArchivo.Add(nuevaLinea);
+
                     }
                 }
             }
-        }
+            using (StreamWriter escribir = new StreamWriter(RutaFull))
+            {
+                foreach (string elemento in LineaArchivo)
+                {
+                    escribir.WriteLine(elemento);
+                }
 
-        }
-
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            
-            
-                // Obtener los datos modificados desde los TextBox
-                string nuevoValor = txtNum.Text; // Ajusta según tus controles
-
-                // Llamar a la función para actualizar la base de datos
-                ActualizarBaseDeDatos(nuevoValor);
-
-                // Mostrar un mensaje u otras acciones después de la modificación
-                MessageBox.Show("Registro modificado correctamente.");
-            
-
+            }
+            MessageBox.Show("Modificado correctamente");
         }
     }
-}
+        //private void BtnModificar_Click(object sender, EventArgs e)
+        //{
+        //    string ID = txtNum.Text;
+        //    List<string> LineaArchivo = new List<string>();
+
+        //    // Verifica si RutaFull es nulo, y establece una ruta predeterminada si es necesario
+        //    if (RutaFull == null)
+        //    {
+        //        RutaFull = (@"../../Resources/Proveedores");  // Ajusta esta ruta según tus necesidades
+        //    }
+
+        //    using (StreamReader leer = new StreamReader(RutaFull))
+        //    {
+        //        string line;
+        //        while ((line = leer.ReadLine()) != null)
+        //        {
+        //            string[] parametros = line.Split(';');
+        //            if (parametros[0] != ID)
+        //            {
+        //                LineaArchivo.Add(line);
+        //            }
+        //            else
+        //            {
+        //                string nuevaLinea = txtNum.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtExp.Text + ";" + txtJuzg.Text + ";" + txtJurisdicción.Text + ";" + txtDirección.Text + ";" + txtLiquidador.Text;
+        //                LineaArchivo.Add(nuevaLinea);
+        //            }
+        //        }
+        //    }
+
+        //    using (StreamWriter escribir = new StreamWriter(RutaFull))
+        //    {
+        //        foreach (string elemento in LineaArchivo)
+        //        {
+        //            escribir.WriteLine(elemento);
+        //        }
+        //    }
+
+        //    MessageBox.Show("Modificado correctamente");
+        //}
+
+
+
+
+
+
+    }
+
+

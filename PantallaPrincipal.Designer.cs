@@ -34,6 +34,7 @@
             this.vERPROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cARGARPROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.eLCLUBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(52)))), ((int)(((byte)(82)))));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pROVEEDORESToolStripMenuItem});
+            this.pROVEEDORESToolStripMenuItem,
+            this.eLCLUBToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 25);
@@ -73,6 +75,15 @@
             this.cARGARPROVEEDORESToolStripMenuItem.Text = "CARGAR PROVEEDORES";
             this.cARGARPROVEEDORESToolStripMenuItem.Click += new System.EventHandler(this.cARGARPROVEEDORESToolStripMenuItem_Click);
             // 
+            // eLCLUBToolStripMenuItem
+            // 
+            this.eLCLUBToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eLCLUBToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.eLCLUBToolStripMenuItem.Name = "eLCLUBToolStripMenuItem";
+            this.eLCLUBToolStripMenuItem.Size = new System.Drawing.Size(70, 21);
+            this.eLCLUBToolStripMenuItem.Text = "EL CLUB";
+            this.eLCLUBToolStripMenuItem.Click += new System.EventHandler(this.eLCLUBToolStripMenuItem_Click);
+            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,5 +110,6 @@
         private System.Windows.Forms.ToolStripMenuItem vERPROVEEDORESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cARGARPROVEEDORESToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ToolStripMenuItem eLCLUBToolStripMenuItem;
     }
 }
